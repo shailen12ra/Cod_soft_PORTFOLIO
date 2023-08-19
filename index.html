@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <h2>My Portfolio</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="home">
+    <div class="container">
+      <div class="card animated-element">
+        <h2>Welcome to My Portfolio</h2>
+        <img src="./image/Aniket is here.png" alt="" width="200" height="200" />
+        <p>
+          Welcome to my portfolio! Portfolio in this is the place
+          Where do I share my work and experience in my life?
+          various fields. I believe that this portfolio will give
+          Good description of my ability and interest.
+          In this portfolio, you will find the various projects that I have done.
+          previous work.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="about">
+    <div class="container">
+      <div class="card animated-element">
+        <h2>About Me</h2>
+        <img src="./image/ak.png" alt="My Photo" width="200" height="200" />
+        <div class="card-content">
+          <p>
+            Hi, my name is Aniket Kanojiya. As a junior
+            Web Developer, currently I am learning HTML, CSS and
+            the javascript i will use to create the view
+            User friendly and responsive interface.
+          </p>
+          <p id="read-more" class="hidden">
+            Besides that, I am also interested in UI/UX design and always
+            Strive to increase expertise in that aspect.
+            The new challenge in web development. If you are interested to
+            work same or have more questions, don't hesitate
+            To contact me through the "Contact" page of this site.
+          </p>
+          <button id="read-more-btn" onclick="toggleReadMore()">
+            <i class="fas fa-chevron-down"></i> Read More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .card {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      background-color: #efefef;
+    }
+
+    .card-content {
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #read-more-btn {
+      padding: 10px 20px;
+      background-color: #6683C2;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    #read-more-btn i {
+      margin-right: 5px;
+    }
+  </style>
+
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <script>
+    function toggleReadMore() {
+      var readMoreElement = document.getElementById("read-more");
+      var readMoreBtn = document.getElementById("read-more-btn");
+
+      if (readMoreElement.classList.contains("hidden")) {
+        readMoreElement.classList.remove("hidden");
+        readMoreBtn.innerHTML = '<i class="fas fa-chevron-up"></i> Hide';
+      } else {
+        readMoreElement.classList.add("hidden");
+        readMoreBtn.innerHTML =
+          '<i class="fas fa-chevron-down"></i> Read More';
+      }
+    }
+  </script>
+  <section id="projects">
+    <div class="container">
+      <h1 class="section-title">
+        <i class="fas fa-folder"></i> My Projects
+      </h1>
+      <div class="project-grid">
+        <div class="project">
+          <h3 class="project-title">Project 1</h3>
+          <div class="project-image">
+            <a href="https://github.com/aniketkanoji/Code_Soft"> <img src="landing_page.jpg" alt="Project 1" /> </a>
+          </div>
+          <p class="project-description">
+            Landing Page With HTML & CSS
+          </p>
+        </div>
+        <div class="project">
+          <h3 class="project-title">Project 2</h3>
+          <div class="project-image">
+            <a href="https://github.com/aniketkanoji/Code_soft_calc"> <img src="calculator.jpg" alt="Project 2" /> </a>
+          </div>
+          <p class="project-description">
+            Calculator With JS
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    #projects {
+      background-color: #f5f5f5;
+      padding: 50px 0;
+    }
+
+    #projects .container {
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .project {
+      background-color: #efefef;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .project h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .project-image img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .project-description {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .scroll-to-top {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #6683C2;
+      color: #ffffff;
+      text-align: center;
+      font-size: 30px;
+      line-height: 50px;
+      cursor: pointer;
+    }
+  </style>
+
+  <section id="contact">
+    <div class="container">
+      <h2><i class="far fa-envelope"></i> Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+  </div>
+  <button class="scroll-to-top" onclick="scrollToTop()">&#8593;</button>
+
+  <script>
+    // Function to scroll back to the top
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Function to show/hide buttons while scrolling
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 25) {
+        document.querySelector('.scroll-to-top').style.display = 'block';
+      } else {
+        document.querySelector('.scroll-to-top').style.display = 'none';
+      }
+    }
+  </script>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="social-icons">
+        <li>
+          <a href="https://wa.me/0000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/aniketkanoji" target="_blank"><i class="fab fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/aniketkanojiya126/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </li>
+
+        <li>
+          <a href="https://www.facebook.com/aniket.kanojiya.927/" target="_blank"><i class="fab fa-facebook"></i></a>
+        </li>
+      </ul>
+      <p>&copy; 2023 Aniket. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
